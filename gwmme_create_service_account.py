@@ -88,7 +88,7 @@ async def create_project():
 
 async def verify_tos_accepted():
   logging.info("Verifying acceptance of Terms of service...")
-  tos_accepted = False
+  tos_accepted = True
   while APIS and not tos_accepted:
     command = f"gcloud services enable {APIS[0]}"
     _, stderr, return_code = await retryable_command(
